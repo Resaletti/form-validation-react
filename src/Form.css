@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label */
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #cbd5f5;
+}
+
+/* Inputs */
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #3B82F6;
+  box-shadow: 0 0 15px rgba(59,130,246,0.5);
+}
+
+/* Erro */
+.error {
+  color: #f87171;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Botão */
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+@media (max-width: 500px) {
+  .form {
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+.success {
+  background: #22c55e;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input:hover {
+  border: 1px solid #06B6D4;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #3B82F6;
+  box-shadow: 0 0 15px rgba(59,130,246,0.5);
+}
+
+.error-border {
+  border: 1px solid #f87171;
+}
